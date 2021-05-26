@@ -12,13 +12,13 @@
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
-            echo "Please complete the form and try again.";
+            echo "Por favor, preencha o formulário e tente novamente.";
             exit;
         }
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "milenapmartins1@hotmail.com";
+        $recipient = "contato@dramilenapessoa.com.br";
 
         // Set the email subject.
         $subject = "$name";
@@ -39,7 +39,7 @@
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            echo "Ups! Algo deu errado e não foi possível enviar sua mensagem.";
+            echo "Ops! Algo deu errado e não foi possível enviar sua mensagem.";
         }
 
     } else {
